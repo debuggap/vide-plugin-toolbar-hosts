@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "a good hosts tool",
   "author": "vic.wang",
-  "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
