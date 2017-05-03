@@ -150,6 +150,7 @@ export default {
     },
     setting () {
       this.savePrevious()
+      store.setItem('lastIndex', this.lastIndex)
       let value = this.common + '\n' + this.cache[this.lists[this.lastIndex]]
       window.require('fs').writeFile('/etc/hosts', value, (error) => {
         if (error) {
