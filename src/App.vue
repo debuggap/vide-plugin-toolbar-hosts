@@ -1,5 +1,5 @@
 <template>
-  <div class="hosts">
+  <div class="hosts" style="z-index:100">
     <div class="lists">
       <div :class="{item: 1, active: publicIndex === 'current'}" @click="showCurrent">current hosts</div>
       <div :class="{item: 1, active: publicIndex === 'common'}" @click="showCommon">common hosts</div>
@@ -171,7 +171,6 @@ export default {
   
   position:absolute;
   border:1px solid #ccc;
-  z-index: 222;
   width: 600px;
   height:500px;
   left: 50%;
