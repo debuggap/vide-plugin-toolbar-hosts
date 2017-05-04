@@ -21,7 +21,6 @@
 
 <script>
 import localforage from 'localforage'
-import 'element-ui/lib/theme-default/index.css'
 
 localforage.config({
   driver: localforage.WEBSQL,
