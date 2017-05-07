@@ -33,6 +33,10 @@ localforage.config({
 let store = localforage.createInstance({
   name: 'hosts_instance'
 })
+let hostPath = '/etc/hosts'
+if (/windows/i.test(navigator.userAgent)) {
+  hostPath = 'C:\\Windows\\System32\\drivers\\etc\\HOSTS'
+}
 
 export default {
   props: ['callback'],
@@ -127,7 +131,7 @@ export default {
     },
     showCurrent () {
       this.publicIndex = 'current'
-      window.require('fs').readFile('/etc/hosts', (error, value) => {
+      window.require('fs').readFile(hostPath, (error, value) => {
         if (error) {
           alert(error.message)
         } else {
@@ -151,7 +155,7 @@ export default {
       this.savePrevious()
       store.setItem('lastIndex', this.lastIndex)
       let value = this.common + '\n' + this.cache[this.lists[this.lastIndex]]
-      window.require('fs').writeFile('/etc/hosts', value, (error) => {
+      window.require('fs').writeFile(hostPath, value, (error) => {
         if (error) {
           alert(error.message)
         } else {
