@@ -182,6 +182,7 @@ export default {
   margin-left: -300px;
   margin-top:-250px;
   background-color:#fff;
+  box-shadow: 0px 0px 5px 2px #ccc;
   
   #hosts_editor {
     width:100%;

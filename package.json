@@ -1,6 +1,6 @@
 {
   "name": "vide-plugin-toolbar-hosts",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "a good hosts tool",
   "author": "vic.wang",
   "scripts": {
